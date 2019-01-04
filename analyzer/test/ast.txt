@@ -1,0 +1,494 @@
+     0  *ast.Package {
+     1  .  Name: "testchild"
+     2  .  Scope: nil
+     3  .  Imports: nil
+     4  .  Files: map[string]*ast.File (len = 1) {
+     5  .  .  "test/testchild/testchild.go": *ast.File {
+     6  .  .  .  Doc: nil
+     7  .  .  .  Package: test/testchild/testchild.go:1:1
+     8  .  .  .  Name: *ast.Ident {
+     9  .  .  .  .  NamePos: test/testchild/testchild.go:1:9
+    10  .  .  .  .  Name: "testchild"
+    11  .  .  .  .  Obj: nil
+    12  .  .  .  }
+    13  .  .  .  Decls: []ast.Decl (len = 2) {
+    14  .  .  .  .  0: *ast.GenDecl {
+    15  .  .  .  .  .  Doc: nil
+    16  .  .  .  .  .  TokPos: test/testchild/testchild.go:3:1
+    17  .  .  .  .  .  Tok: import
+    18  .  .  .  .  .  Lparen: test/testchild/testchild.go:3:8
+    19  .  .  .  .  .  Specs: []ast.Spec (len = 2) {
+    20  .  .  .  .  .  .  0: *ast.ImportSpec {
+    21  .  .  .  .  .  .  .  Doc: nil
+    22  .  .  .  .  .  .  .  Name: nil
+    23  .  .  .  .  .  .  .  Path: *ast.BasicLit {
+    24  .  .  .  .  .  .  .  .  ValuePos: test/testchild/testchild.go:4:2
+    25  .  .  .  .  .  .  .  .  Kind: STRING
+    26  .  .  .  .  .  .  .  .  Value: "\"strconv\""
+    27  .  .  .  .  .  .  .  }
+    28  .  .  .  .  .  .  .  Comment: nil
+    29  .  .  .  .  .  .  .  EndPos: -
+    30  .  .  .  .  .  .  }
+    31  .  .  .  .  .  .  1: *ast.ImportSpec {
+    32  .  .  .  .  .  .  .  Doc: nil
+    33  .  .  .  .  .  .  .  Name: *ast.Ident {
+    34  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:6:2
+    35  .  .  .  .  .  .  .  .  Name: "grandchild"
+    36  .  .  .  .  .  .  .  .  Obj: nil
+    37  .  .  .  .  .  .  .  }
+    38  .  .  .  .  .  .  .  Path: *ast.BasicLit {
+    39  .  .  .  .  .  .  .  .  ValuePos: test/testchild/testchild.go:6:13
+    40  .  .  .  .  .  .  .  .  Kind: STRING
+    41  .  .  .  .  .  .  .  .  Value: "\"github.com/aimof/depfon/analyzer/test/testchild/testgrandchild\""
+    42  .  .  .  .  .  .  .  }
+    43  .  .  .  .  .  .  .  Comment: nil
+    44  .  .  .  .  .  .  .  EndPos: -
+    45  .  .  .  .  .  .  }
+    46  .  .  .  .  .  }
+    47  .  .  .  .  .  Rparen: test/testchild/testchild.go:7:1
+    48  .  .  .  .  }
+    49  .  .  .  .  1: *ast.FuncDecl {
+    50  .  .  .  .  .  Doc: nil
+    51  .  .  .  .  .  Recv: nil
+    52  .  .  .  .  .  Name: *ast.Ident {
+    53  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:9:6
+    54  .  .  .  .  .  .  Name: "Child"
+    55  .  .  .  .  .  .  Obj: *ast.Object {
+    56  .  .  .  .  .  .  .  Kind: func
+    57  .  .  .  .  .  .  .  Name: "Child"
+    58  .  .  .  .  .  .  .  Decl: *(obj @ 49)
+    59  .  .  .  .  .  .  .  Data: nil
+    60  .  .  .  .  .  .  .  Type: nil
+    61  .  .  .  .  .  .  }
+    62  .  .  .  .  .  }
+    63  .  .  .  .  .  Type: *ast.FuncType {
+    64  .  .  .  .  .  .  Func: test/testchild/testchild.go:9:1
+    65  .  .  .  .  .  .  Params: *ast.FieldList {
+    66  .  .  .  .  .  .  .  Opening: test/testchild/testchild.go:9:11
+    67  .  .  .  .  .  .  .  List: []*ast.Field (len = 1) {
+    68  .  .  .  .  .  .  .  .  0: *ast.Field {
+    69  .  .  .  .  .  .  .  .  .  Doc: nil
+    70  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    71  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    72  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:9:12
+    73  .  .  .  .  .  .  .  .  .  .  .  Name: "n"
+    74  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    75  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+    76  .  .  .  .  .  .  .  .  .  .  .  .  Name: "n"
+    77  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 68)
+    78  .  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+    79  .  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+    80  .  .  .  .  .  .  .  .  .  .  .  }
+    81  .  .  .  .  .  .  .  .  .  .  }
+    82  .  .  .  .  .  .  .  .  .  }
+    83  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    84  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:9:14
+    85  .  .  .  .  .  .  .  .  .  .  Name: "int"
+    86  .  .  .  .  .  .  .  .  .  .  Obj: nil
+    87  .  .  .  .  .  .  .  .  .  }
+    88  .  .  .  .  .  .  .  .  .  Tag: nil
+    89  .  .  .  .  .  .  .  .  .  Comment: nil
+    90  .  .  .  .  .  .  .  .  }
+    91  .  .  .  .  .  .  .  }
+    92  .  .  .  .  .  .  .  Closing: test/testchild/testchild.go:9:17
+    93  .  .  .  .  .  .  }
+    94  .  .  .  .  .  .  Results: *ast.FieldList {
+    95  .  .  .  .  .  .  .  Opening: -
+    96  .  .  .  .  .  .  .  List: []*ast.Field (len = 1) {
+    97  .  .  .  .  .  .  .  .  0: *ast.Field {
+    98  .  .  .  .  .  .  .  .  .  Doc: nil
+    99  .  .  .  .  .  .  .  .  .  Names: nil
+   100  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   101  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:9:19
+   102  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   103  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   104  .  .  .  .  .  .  .  .  .  }
+   105  .  .  .  .  .  .  .  .  .  Tag: nil
+   106  .  .  .  .  .  .  .  .  .  Comment: nil
+   107  .  .  .  .  .  .  .  .  }
+   108  .  .  .  .  .  .  .  }
+   109  .  .  .  .  .  .  .  Closing: -
+   110  .  .  .  .  .  .  }
+   111  .  .  .  .  .  }
+   112  .  .  .  .  .  Body: *ast.BlockStmt {
+   113  .  .  .  .  .  .  Lbrace: test/testchild/testchild.go:9:26
+   114  .  .  .  .  .  .  List: []ast.Stmt (len = 3) {
+   115  .  .  .  .  .  .  .  0: *ast.AssignStmt {
+   116  .  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   117  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   118  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:10:2
+   119  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   120  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   121  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   122  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   123  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 115)
+   124  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+   125  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+   126  .  .  .  .  .  .  .  .  .  .  }
+   127  .  .  .  .  .  .  .  .  .  }
+   128  .  .  .  .  .  .  .  .  }
+   129  .  .  .  .  .  .  .  .  TokPos: test/testchild/testchild.go:10:6
+   130  .  .  .  .  .  .  .  .  Tok: :=
+   131  .  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   132  .  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   133  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   134  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   135  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:10:9
+   136  .  .  .  .  .  .  .  .  .  .  .  .  Name: "grandchild"
+   137  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   138  .  .  .  .  .  .  .  .  .  .  .  }
+   139  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   140  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:10:20
+   141  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Grandchild"
+   142  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   143  .  .  .  .  .  .  .  .  .  .  .  }
+   144  .  .  .  .  .  .  .  .  .  .  }
+   145  .  .  .  .  .  .  .  .  .  .  Lparen: test/testchild/testchild.go:10:30
+   146  .  .  .  .  .  .  .  .  .  .  Args: nil
+   147  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   148  .  .  .  .  .  .  .  .  .  .  Rparen: test/testchild/testchild.go:10:31
+   149  .  .  .  .  .  .  .  .  .  }
+   150  .  .  .  .  .  .  .  .  }
+   151  .  .  .  .  .  .  .  }
+   152  .  .  .  .  .  .  .  1: *ast.IfStmt {
+   153  .  .  .  .  .  .  .  .  If: test/testchild/testchild.go:11:2
+   154  .  .  .  .  .  .  .  .  Init: nil
+   155  .  .  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+   156  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   157  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:11:5
+   158  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   159  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 120)
+   160  .  .  .  .  .  .  .  .  .  }
+   161  .  .  .  .  .  .  .  .  .  OpPos: test/testchild/testchild.go:11:9
+   162  .  .  .  .  .  .  .  .  .  Op: !=
+   163  .  .  .  .  .  .  .  .  .  Y: *ast.Ident {
+   164  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:11:12
+   165  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+   166  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   167  .  .  .  .  .  .  .  .  .  }
+   168  .  .  .  .  .  .  .  .  }
+   169  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   170  .  .  .  .  .  .  .  .  .  Lbrace: test/testchild/testchild.go:11:16
+   171  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+   172  .  .  .  .  .  .  .  .  .  .  0: *ast.ReturnStmt {
+   173  .  .  .  .  .  .  .  .  .  .  .  Return: test/testchild/testchild.go:12:3
+   174  .  .  .  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 1) {
+   175  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   176  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: test/testchild/testchild.go:12:10
+   177  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   178  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"\""
+   179  .  .  .  .  .  .  .  .  .  .  .  .  }
+   180  .  .  .  .  .  .  .  .  .  .  .  }
+   181  .  .  .  .  .  .  .  .  .  .  }
+   182  .  .  .  .  .  .  .  .  .  }
+   183  .  .  .  .  .  .  .  .  .  Rbrace: test/testchild/testchild.go:13:2
+   184  .  .  .  .  .  .  .  .  }
+   185  .  .  .  .  .  .  .  .  Else: nil
+   186  .  .  .  .  .  .  .  }
+   187  .  .  .  .  .  .  .  2: *ast.ReturnStmt {
+   188  .  .  .  .  .  .  .  .  Return: test/testchild/testchild.go:14:2
+   189  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 1) {
+   190  .  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   191  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   192  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   193  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:14:9
+   194  .  .  .  .  .  .  .  .  .  .  .  .  Name: "strconv"
+   195  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   196  .  .  .  .  .  .  .  .  .  .  .  }
+   197  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   198  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:14:17
+   199  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Itoa"
+   200  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   201  .  .  .  .  .  .  .  .  .  .  .  }
+   202  .  .  .  .  .  .  .  .  .  .  }
+   203  .  .  .  .  .  .  .  .  .  .  Lparen: test/testchild/testchild.go:14:21
+   204  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   205  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   206  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testchild.go:14:22
+   207  .  .  .  .  .  .  .  .  .  .  .  .  Name: "n"
+   208  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 74)
+   209  .  .  .  .  .  .  .  .  .  .  .  }
+   210  .  .  .  .  .  .  .  .  .  .  }
+   211  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   212  .  .  .  .  .  .  .  .  .  .  Rparen: test/testchild/testchild.go:14:23
+   213  .  .  .  .  .  .  .  .  .  }
+   214  .  .  .  .  .  .  .  .  }
+   215  .  .  .  .  .  .  .  }
+   216  .  .  .  .  .  .  }
+   217  .  .  .  .  .  .  Rbrace: test/testchild/testchild.go:15:1
+   218  .  .  .  .  .  }
+   219  .  .  .  .  }
+   220  .  .  .  }
+   221  .  .  .  Scope: *ast.Scope {
+   222  .  .  .  .  Outer: nil
+   223  .  .  .  .  Objects: map[string]*ast.Object (len = 1) {
+   224  .  .  .  .  .  "Child": *(obj @ 55)
+   225  .  .  .  .  }
+   226  .  .  .  }
+   227  .  .  .  Imports: []*ast.ImportSpec (len = 2) {
+   228  .  .  .  .  0: *(obj @ 20)
+   229  .  .  .  .  1: *(obj @ 31)
+   230  .  .  .  }
+   231  .  .  .  Unresolved: []*ast.Ident (len = 5) {
+   232  .  .  .  .  0: *(obj @ 83)
+   233  .  .  .  .  1: *(obj @ 100)
+   234  .  .  .  .  2: *(obj @ 134)
+   235  .  .  .  .  3: *(obj @ 163)
+   236  .  .  .  .  4: *(obj @ 192)
+   237  .  .  .  }
+   238  .  .  .  Comments: nil
+   239  .  .  }
+   240  .  }
+   241  }
+     0  *ast.Package {
+     1  .  Name: "test"
+     2  .  Scope: nil
+     3  .  Imports: nil
+     4  .  Files: map[string]*ast.File (len = 1) {
+     5  .  .  "test/sample.go": *ast.File {
+     6  .  .  .  Doc: nil
+     7  .  .  .  Package: test/sample.go:1:1
+     8  .  .  .  Name: *ast.Ident {
+     9  .  .  .  .  NamePos: test/sample.go:1:9
+    10  .  .  .  .  Name: "test"
+    11  .  .  .  .  Obj: nil
+    12  .  .  .  }
+    13  .  .  .  Decls: []ast.Decl (len = 3) {
+    14  .  .  .  .  0: *ast.GenDecl {
+    15  .  .  .  .  .  Doc: nil
+    16  .  .  .  .  .  TokPos: test/sample.go:3:1
+    17  .  .  .  .  .  Tok: import
+    18  .  .  .  .  .  Lparen: -
+    19  .  .  .  .  .  Specs: []ast.Spec (len = 1) {
+    20  .  .  .  .  .  .  0: *ast.ImportSpec {
+    21  .  .  .  .  .  .  .  Doc: nil
+    22  .  .  .  .  .  .  .  Name: nil
+    23  .  .  .  .  .  .  .  Path: *ast.BasicLit {
+    24  .  .  .  .  .  .  .  .  ValuePos: test/sample.go:3:8
+    25  .  .  .  .  .  .  .  .  Kind: STRING
+    26  .  .  .  .  .  .  .  .  Value: "\"github.com/aimof/depfon/analyzer/test/testchild\""
+    27  .  .  .  .  .  .  .  }
+    28  .  .  .  .  .  .  .  Comment: nil
+    29  .  .  .  .  .  .  .  EndPos: -
+    30  .  .  .  .  .  .  }
+    31  .  .  .  .  .  }
+    32  .  .  .  .  .  Rparen: -
+    33  .  .  .  .  }
+    34  .  .  .  .  1: *ast.FuncDecl {
+    35  .  .  .  .  .  Doc: nil
+    36  .  .  .  .  .  Recv: nil
+    37  .  .  .  .  .  Name: *ast.Ident {
+    38  .  .  .  .  .  .  NamePos: test/sample.go:5:6
+    39  .  .  .  .  .  .  Name: "sample"
+    40  .  .  .  .  .  .  Obj: *ast.Object {
+    41  .  .  .  .  .  .  .  Kind: func
+    42  .  .  .  .  .  .  .  Name: "sample"
+    43  .  .  .  .  .  .  .  Decl: *(obj @ 34)
+    44  .  .  .  .  .  .  .  Data: nil
+    45  .  .  .  .  .  .  .  Type: nil
+    46  .  .  .  .  .  .  }
+    47  .  .  .  .  .  }
+    48  .  .  .  .  .  Type: *ast.FuncType {
+    49  .  .  .  .  .  .  Func: test/sample.go:5:1
+    50  .  .  .  .  .  .  Params: *ast.FieldList {
+    51  .  .  .  .  .  .  .  Opening: test/sample.go:5:12
+    52  .  .  .  .  .  .  .  List: nil
+    53  .  .  .  .  .  .  .  Closing: test/sample.go:5:13
+    54  .  .  .  .  .  .  }
+    55  .  .  .  .  .  .  Results: nil
+    56  .  .  .  .  .  }
+    57  .  .  .  .  .  Body: *ast.BlockStmt {
+    58  .  .  .  .  .  .  Lbrace: test/sample.go:5:15
+    59  .  .  .  .  .  .  List: []ast.Stmt (len = 2) {
+    60  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+    61  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+    62  .  .  .  .  .  .  .  .  .  Fun: *ast.Ident {
+    63  .  .  .  .  .  .  .  .  .  .  NamePos: test/sample.go:6:2
+    64  .  .  .  .  .  .  .  .  .  .  Name: "called"
+    65  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    66  .  .  .  .  .  .  .  .  .  .  .  Kind: func
+    67  .  .  .  .  .  .  .  .  .  .  .  Name: "called"
+    68  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.FuncDecl {
+    69  .  .  .  .  .  .  .  .  .  .  .  .  Doc: nil
+    70  .  .  .  .  .  .  .  .  .  .  .  .  Recv: nil
+    71  .  .  .  .  .  .  .  .  .  .  .  .  Name: *ast.Ident {
+    72  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/sample.go:10:6
+    73  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "called"
+    74  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 65)
+    75  .  .  .  .  .  .  .  .  .  .  .  .  }
+    76  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.FuncType {
+    77  .  .  .  .  .  .  .  .  .  .  .  .  .  Func: test/sample.go:10:1
+    78  .  .  .  .  .  .  .  .  .  .  .  .  .  Params: *ast.FieldList {
+    79  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Opening: test/sample.go:10:12
+    80  .  .  .  .  .  .  .  .  .  .  .  .  .  .  List: nil
+    81  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Closing: test/sample.go:10:13
+    82  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    83  .  .  .  .  .  .  .  .  .  .  .  .  .  Results: nil
+    84  .  .  .  .  .  .  .  .  .  .  .  .  }
+    85  .  .  .  .  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+    86  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrace: test/sample.go:10:15
+    87  .  .  .  .  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+    88  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.ReturnStmt {
+    89  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Return: test/sample.go:11:2
+    90  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Results: nil
+    91  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    92  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    93  .  .  .  .  .  .  .  .  .  .  .  .  .  Rbrace: test/sample.go:12:1
+    94  .  .  .  .  .  .  .  .  .  .  .  .  }
+    95  .  .  .  .  .  .  .  .  .  .  .  }
+    96  .  .  .  .  .  .  .  .  .  .  .  Data: nil
+    97  .  .  .  .  .  .  .  .  .  .  .  Type: nil
+    98  .  .  .  .  .  .  .  .  .  .  }
+    99  .  .  .  .  .  .  .  .  .  }
+   100  .  .  .  .  .  .  .  .  .  Lparen: test/sample.go:6:8
+   101  .  .  .  .  .  .  .  .  .  Args: nil
+   102  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   103  .  .  .  .  .  .  .  .  .  Rparen: test/sample.go:6:9
+   104  .  .  .  .  .  .  .  .  }
+   105  .  .  .  .  .  .  .  }
+   106  .  .  .  .  .  .  .  1: *ast.AssignStmt {
+   107  .  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   108  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   109  .  .  .  .  .  .  .  .  .  .  NamePos: test/sample.go:7:2
+   110  .  .  .  .  .  .  .  .  .  .  Name: "_"
+   111  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   112  .  .  .  .  .  .  .  .  .  }
+   113  .  .  .  .  .  .  .  .  }
+   114  .  .  .  .  .  .  .  .  TokPos: test/sample.go:7:4
+   115  .  .  .  .  .  .  .  .  Tok: =
+   116  .  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   117  .  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   118  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   119  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   120  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/sample.go:7:6
+   121  .  .  .  .  .  .  .  .  .  .  .  .  Name: "testchild"
+   122  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   123  .  .  .  .  .  .  .  .  .  .  .  }
+   124  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   125  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: test/sample.go:7:16
+   126  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Child"
+   127  .  .  .  .  .  .  .  .  .  .  .  .  Obj: nil
+   128  .  .  .  .  .  .  .  .  .  .  .  }
+   129  .  .  .  .  .  .  .  .  .  .  }
+   130  .  .  .  .  .  .  .  .  .  .  Lparen: test/sample.go:7:21
+   131  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   132  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   133  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: test/sample.go:7:22
+   134  .  .  .  .  .  .  .  .  .  .  .  .  Kind: INT
+   135  .  .  .  .  .  .  .  .  .  .  .  .  Value: "3"
+   136  .  .  .  .  .  .  .  .  .  .  .  }
+   137  .  .  .  .  .  .  .  .  .  .  }
+   138  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   139  .  .  .  .  .  .  .  .  .  .  Rparen: test/sample.go:7:23
+   140  .  .  .  .  .  .  .  .  .  }
+   141  .  .  .  .  .  .  .  .  }
+   142  .  .  .  .  .  .  .  }
+   143  .  .  .  .  .  .  }
+   144  .  .  .  .  .  .  Rbrace: test/sample.go:8:1
+   145  .  .  .  .  .  }
+   146  .  .  .  .  }
+   147  .  .  .  .  2: *(obj @ 68)
+   148  .  .  .  }
+   149  .  .  .  Scope: *ast.Scope {
+   150  .  .  .  .  Outer: nil
+   151  .  .  .  .  Objects: map[string]*ast.Object (len = 2) {
+   152  .  .  .  .  .  "sample": *(obj @ 40)
+   153  .  .  .  .  .  "called": *(obj @ 65)
+   154  .  .  .  .  }
+   155  .  .  .  }
+   156  .  .  .  Imports: []*ast.ImportSpec (len = 1) {
+   157  .  .  .  .  0: *(obj @ 20)
+   158  .  .  .  }
+   159  .  .  .  Unresolved: []*ast.Ident (len = 1) {
+   160  .  .  .  .  0: *(obj @ 119)
+   161  .  .  .  }
+   162  .  .  .  Comments: nil
+   163  .  .  }
+   164  .  }
+   165  }
+     0  *ast.Package {
+     1  .  Name: "grandchild"
+     2  .  Scope: nil
+     3  .  Imports: nil
+     4  .  Files: map[string]*ast.File (len = 1) {
+     5  .  .  "test/testchild/testgrandchild/grandchild.go": *ast.File {
+     6  .  .  .  Doc: nil
+     7  .  .  .  Package: test/testchild/testgrandchild/grandchild.go:1:1
+     8  .  .  .  Name: *ast.Ident {
+     9  .  .  .  .  NamePos: test/testchild/testgrandchild/grandchild.go:1:9
+    10  .  .  .  .  Name: "grandchild"
+    11  .  .  .  .  Obj: nil
+    12  .  .  .  }
+    13  .  .  .  Decls: []ast.Decl (len = 1) {
+    14  .  .  .  .  0: *ast.FuncDecl {
+    15  .  .  .  .  .  Doc: nil
+    16  .  .  .  .  .  Recv: nil
+    17  .  .  .  .  .  Name: *ast.Ident {
+    18  .  .  .  .  .  .  NamePos: test/testchild/testgrandchild/grandchild.go:3:6
+    19  .  .  .  .  .  .  Name: "Grandchild"
+    20  .  .  .  .  .  .  Obj: *ast.Object {
+    21  .  .  .  .  .  .  .  Kind: func
+    22  .  .  .  .  .  .  .  Name: "Grandchild"
+    23  .  .  .  .  .  .  .  Decl: *(obj @ 14)
+    24  .  .  .  .  .  .  .  Data: nil
+    25  .  .  .  .  .  .  .  Type: nil
+    26  .  .  .  .  .  .  }
+    27  .  .  .  .  .  }
+    28  .  .  .  .  .  Type: *ast.FuncType {
+    29  .  .  .  .  .  .  Func: test/testchild/testgrandchild/grandchild.go:3:1
+    30  .  .  .  .  .  .  Params: *ast.FieldList {
+    31  .  .  .  .  .  .  .  Opening: test/testchild/testgrandchild/grandchild.go:3:16
+    32  .  .  .  .  .  .  .  List: nil
+    33  .  .  .  .  .  .  .  Closing: test/testchild/testgrandchild/grandchild.go:3:17
+    34  .  .  .  .  .  .  }
+    35  .  .  .  .  .  .  Results: *ast.FieldList {
+    36  .  .  .  .  .  .  .  Opening: -
+    37  .  .  .  .  .  .  .  List: []*ast.Field (len = 1) {
+    38  .  .  .  .  .  .  .  .  0: *ast.Field {
+    39  .  .  .  .  .  .  .  .  .  Doc: nil
+    40  .  .  .  .  .  .  .  .  .  Names: nil
+    41  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    42  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testgrandchild/grandchild.go:3:19
+    43  .  .  .  .  .  .  .  .  .  .  Name: "error"
+    44  .  .  .  .  .  .  .  .  .  .  Obj: nil
+    45  .  .  .  .  .  .  .  .  .  }
+    46  .  .  .  .  .  .  .  .  .  Tag: nil
+    47  .  .  .  .  .  .  .  .  .  Comment: nil
+    48  .  .  .  .  .  .  .  .  }
+    49  .  .  .  .  .  .  .  }
+    50  .  .  .  .  .  .  .  Closing: -
+    51  .  .  .  .  .  .  }
+    52  .  .  .  .  .  }
+    53  .  .  .  .  .  Body: *ast.BlockStmt {
+    54  .  .  .  .  .  .  Lbrace: test/testchild/testgrandchild/grandchild.go:3:25
+    55  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+    56  .  .  .  .  .  .  .  0: *ast.ReturnStmt {
+    57  .  .  .  .  .  .  .  .  Return: test/testchild/testgrandchild/grandchild.go:4:2
+    58  .  .  .  .  .  .  .  .  Results: []ast.Expr (len = 1) {
+    59  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    60  .  .  .  .  .  .  .  .  .  .  NamePos: test/testchild/testgrandchild/grandchild.go:4:9
+    61  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+    62  .  .  .  .  .  .  .  .  .  .  Obj: nil
+    63  .  .  .  .  .  .  .  .  .  }
+    64  .  .  .  .  .  .  .  .  }
+    65  .  .  .  .  .  .  .  }
+    66  .  .  .  .  .  .  }
+    67  .  .  .  .  .  .  Rbrace: test/testchild/testgrandchild/grandchild.go:5:1
+    68  .  .  .  .  .  }
+    69  .  .  .  .  }
+    70  .  .  .  }
+    71  .  .  .  Scope: *ast.Scope {
+    72  .  .  .  .  Outer: nil
+    73  .  .  .  .  Objects: map[string]*ast.Object (len = 1) {
+    74  .  .  .  .  .  "Grandchild": *(obj @ 20)
+    75  .  .  .  .  }
+    76  .  .  .  }
+    77  .  .  .  Imports: nil
+    78  .  .  .  Unresolved: []*ast.Ident (len = 2) {
+    79  .  .  .  .  0: *(obj @ 41)
+    80  .  .  .  .  1: *(obj @ 59)
+    81  .  .  .  }
+    82  .  .  .  Comments: nil
+    83  .  .  }
+    84  .  }
+    85  }
