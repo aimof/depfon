@@ -6,7 +6,7 @@ import (
 
 func TestParseAllFiles(t *testing.T) {
 	ana := newAnalyzer("./test", "sample")
-	err := ana.parseAllFiles()
+	err := ana.parseAllDirs()
 	if err != nil {
 		t.Error(err)
 	}
