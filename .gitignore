@@ -1,0 +1,5 @@
+vendor/*
+cmd/depfon/depfon
+*.txt
+cover.out
+!analyzer/test/*.txt

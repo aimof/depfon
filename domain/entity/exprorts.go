@@ -1,4 +1,4 @@
-package domain
+package entity
 
 import (
 	"errors"
@@ -36,12 +36,12 @@ func (ft *FunctionTree) Show(name string) (parents, children []string, err error
 	for key := range f.parents {
 		parentsSlice = append(parentsSlice, key)
 	}
-	parentsSlice = sort.StringSlice(parentsSlice)
+	sort.Strings(parentsSlice)
 	childrenSlice := make([]string, 0, len(f.children))
 	for key := range f.children {
 		childrenSlice = append(childrenSlice, key)
 	}
-	childrenSlice = sort.StringSlice(childrenSlice)
+	sort.Strings(childrenSlice)
 	return parentsSlice, childrenSlice, nil
 }
 

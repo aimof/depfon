@@ -1,9 +1,9 @@
-package domain_test
+package entity_test
 
 import (
 	"testing"
 
-	"github.com/aimof/depfon/domain"
+	"github.com/aimof/depfon/domain/entity"
 )
 
 var (
@@ -15,9 +15,9 @@ var (
 )
 
 // make sampleFunctionTree and TestNewFunctionTree
-func sampleFunctionTree(t *testing.T) *domain.FunctionTree {
+func sampleFunctionTree(t *testing.T) *entity.FunctionTree {
 
-	ft, err := domain.NewFunctionTree(rootName)
+	ft, err := entity.NewFunctionTree(rootName)
 	if ft == nil {
 		t.Error()
 	}
@@ -72,7 +72,7 @@ func TestShow(t *testing.T) {
 }
 
 func TestCountAll(t *testing.T) {
-	ft, err := domain.NewFunctionTree(rootName)
+	ft, err := entity.NewFunctionTree(rootName)
 	if err != nil {
 		t.Error()
 	}
